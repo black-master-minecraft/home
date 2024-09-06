@@ -1,0 +1,302 @@
+/* Genel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Navbar Sabitleme */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+body {
+    padding-top: 70px; /* Navbar yüksekliğine göre boşluk bırak */
+}
+
+.discord-btn {
+    background-color: #7289da;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.discord-btn:hover {
+    background-color: #677bc4;
+}
+
+/* Hero Bölümü */
+.hero-section {
+    background: linear-gradient(135deg, #ffcc00 0%, #800000 100%);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+    /* Sunucu Adresi Butonu */
+    .copy-btn {
+        background-color: #ffffff;
+        color: #ffcc00;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .copy-btn:hover {
+        background-color: #ffcc0p;
+        color: #ffffff;
+    }
+
+    /* Kredi Bilgileri (Stats) */
+    .stats {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .stats h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .player-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .player-card {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .player-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .player-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+    .player-name {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .credit-amount {
+        font-size: 18px;
+        font-weight: 500;
+        color: #800000;
+        margin-top: 10px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #282828;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        margin-top: 50px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+  .rainbow-text {
+            font-size: 2.5rem;
+            font-weight: 600;
+            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 6s ease-in-out infinite;
+            background-size: 400% 400%;
+        }
+        @keyframes rainbow {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .tools-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .tool-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            width: 300px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .tool-card h2 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+        .tool-card button {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .tool-card button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            animation: modalFadeIn 0.3s;
+        }
+        @keyframes modalFadeIn {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        .close {
+            color: var(--text-color);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close:hover,
+        .close:focus {
+            color: var(--accent-color);
+        }
+        #apiLink {
+            word-break: break-all;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #ABA6A2;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        #apiContent {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            padding: 15px;
+            background-color: #ABA6A2;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .copy-buton {
+            background-color: #71F723;
+            color: var(--button-text);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 10px;
+        }
+        .copy-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px)
+        

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M A S T E R - MC Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">
+                <span>M A S T E R - MC Server</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="error.html">Kredi</a></li>
+                <li><a href="destek.html">Destek</a></li>
+                <li><a href="bilgi.html">Bilgi</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>M A S T E R - Destek</h1>
+            <p>En iyi hizmet için discord sunucumuza katıl!</p>
+         <button class="copy-btn" onclick="window.location.href='https://discord.gg/g528PSmH';">Discord'a Katıl</button>
+        </div>
+    </header>
+
+    <section class="stats">
+        <h2>Katkıda Bulunanlar</h2>
+        <div class="player-cards">
+            <div class="player-card">
+                <img src="https://cdn.discordapp.com/avatars/1175495721382850661/4eb1c215c39ad8ea93f57523afe54041.webp" alt="Player Avatar">
+                <p class="player-name">Emirhan | M A S T E R</p>
+                <span class="credit-amount">Sunucu Sahibi</span>
+            </div>
+        <div class="player-cards">
+            <div class="player-card">
+                <img src="https://cdn.glitch.global/f881da34-f573-40a8-8352-3337387cdc24/714fdfe9850266b1f6a5a9e554f41f2d.png?v=1725545865577" alt="Player Avatar">
+                <p class="player-name">Wlame Fleet</p>
+                <span class="credit-amount">Site Sahibi</span>
+            </div>
+
+            <!-- Diğer oyuncular buraya eklenebilir -->
+        </div>
+    </section>
+      <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p><strong>IP:</strong></p>
+            <div id="apiLink"></div>
+            <p><strong>Desteklenen Sürüm:</strong></p>
+            <pre id="apiContent"></pre>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 B L A C K M A S T E R | Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+</html>
+<script>
+          const apiDetails = {
+            sunucuDetails: {
+                title: "Sunucumuz",
+                link: "blckmster.aternos.me",
+                content: "1.20.1"
+            }
+        };
+  let currentApi = '';
+
+        function showDetails(api) {
+            currentApi = api;
+            const details = apiDetails[api];
+            document.getElementById('modalTitle').textContent = details.title;
+            document.getElementById('apiLink').textContent = details.link;
+            document.getElementById('apiContent').textContent = details.content;
+            document.getElementById('detailsModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('detailsModal').style.display = 'none';
+        }
+
+        function copyApiLink() {
+            navigator.clipboard.writeText(apiDetails[currentApi].link).then(() => {
+                alert('API linki kopyalandı!');
+            });
+        }
+
+        function copyApiContent() {
+            navigator.clipboard.writeText(apiDetails[currentApi].content).then(() => {
+                alert('API içeriği kopyalandı!');
+            });
+        }
+
+        // Karanlık mod kontrolü
+        function loadUserData() {
+            const userData = JSON.parse(localStorage.getItem('userData'));
+            if (userData && userData.darkMode) {
+                document.body.classList.add('dark-mode');
+            }
+        }
+
+        window.addEventListener('load', loadUserData);
+
+        // Modal dışına tıklandığında kapatma
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('detailsModal')) {
+                closeModal();
+            }
+        }
+</script>

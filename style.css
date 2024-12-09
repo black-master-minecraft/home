@@ -204,7 +204,7 @@ body {
             gap: 20px;
         }
         .tool-card {
-            background-color: var(--card-bg);
+            background-color: var(--backround);
             border-radius: var(--border-radius);
             padding: 20px;
             width: 300px;
@@ -299,4 +299,20 @@ body {
         .copy-btn:hover {
             background-color: var(--accent-color);
             transform: translateY(-2px)
-        
+              
+              
+        .vizyon-butn {
+        background-color: #ffcc00;
+        color: #fffff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+          .vizyon-butn:hover {
+            background-color: #ffcc0p;
+        color: #ffffff;
+          }
